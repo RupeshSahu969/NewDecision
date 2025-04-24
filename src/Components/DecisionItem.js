@@ -1,6 +1,7 @@
 import '../Style/style.css';
 
 const DecisionItem = ({ decision, onClick }) => {
+  
   const date = new Date(decision.date).toLocaleDateString();
   
   const getItemClass = () => {

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import '../Style/style.css';
+
 const DecisionDetail = ({ decision, onUpdate }) => {
+
   const [finalChoice, setFinalChoice] = useState(decision.finalChoice || '');
   const [explanation, setExplanation] = useState(decision.explanation || '');
   const [wasGood, setWasGood] = useState(decision.reflection?.wasGood ?? null);
