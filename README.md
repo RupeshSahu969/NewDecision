@@ -18,7 +18,7 @@
 <br/>
 3. Provides visual feedback on decision outcomes
 <br/>
-<p>Form Structure</p>
+<h3>Form Structure</h3>
 <br/>
 Used dynamic fields for pros/cons to allow flexible input while preventing form overwhelm
 <br/>
@@ -28,13 +28,15 @@ Html, CSS, Javascript, React
 <br/>
 <h1>Image</h1>
 <br/>
-![download111](https://github.com/user-attachments/assets/df802561-bdb4-49b4-8d86-a36eca4bb034)
+![download111](https://github.com/user-attachments/assets/07fa3d28-0071-4d52-a546-8d343fa5cc67)
 
 <br/>
-![form1](https://github.com/user-attachments/assets/046eb693-d474-435b-9a3d-bea283f89ef8)
+
+![form1](https://github.com/user-attachments/assets/d44539c0-56f5-4b62-a089-e4c1007522d9)
 
 <br/>
-![history](https://github.com/user-attachments/assets/4b5152d6-129e-4027-a67a-1418145037e4)
+
+![history](https://github.com/user-attachments/assets/4290a2f2-6bc5-4adb-98a8-ec3606faa058)
 
 <br/>
 <br/>
