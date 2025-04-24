@@ -26,6 +26,15 @@ Used dynamic fields for pros/cons to allow flexible input while preventing form 
 <br/>
 Html, CSS, Javascript, React
 <br/>
+Technologies Used
+React 18
+<br/>
+React Router 6
+<br/>
+Vanilla CSS
+<br/>
+LocalStorage API
+<br/>
 <p>State Management</p>
    1. Chose component state over Redux for simplicity
    <br/>
