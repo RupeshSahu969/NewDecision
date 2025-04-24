@@ -27,8 +27,10 @@ Used dynamic fields for pros/cons to allow flexible input while preventing form 
 Html, CSS, Javascript, React
 <br/>
 <p>State Management</p>
-   - Chose component state over Redux for simplicity
-   - Tradeoff: Might need refactoring if features grow significantly
+   1. Chose component state over Redux for simplicity
+   <br/>
+   2. Tradeoff: Might need refactoring if features grow significantly
+   <br/>
 <br/>
 <h1>Image</h1>
 <br/>
