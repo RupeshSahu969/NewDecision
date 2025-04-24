@@ -11,7 +11,7 @@
 <br/>
 <h3>Core Philosophy</h3>
 
-I <p>focused on creating a minimal but thoughtful interface that</p>:
+<p>focused on creating a minimal but thoughtful interface that</p>:
 1. Makes decision logging frictionless
 2. Encourages reflection on past choices
 3. Provides visual feedback on decision outcomes
