@@ -2,6 +2,7 @@ import DecisionItem from './DecisionItem';
 import '../Style/style.css';
 
 const DecisionList = ({ decisions, onSelect }) => {
+  
   return (
     <div className="decision-list">
       {decisions.length === 0 ? (

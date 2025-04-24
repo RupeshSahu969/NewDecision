@@ -1,28 +1,26 @@
 import { useState } from 'react';
+import '../Style/style.css';
 
 const DecisionForm = ({ onSave }) => {
+
   const [title, setTitle] = useState('');
-  const [pros, setPros] = useState(['']);
-  const [cons, setCons] = useState(['']);
+  const [pros, setPros] = useState(['']); 
+  const [cons, setCons] = useState(['']); 
   const [isThinking, setIsThinking] = useState(true);
-  const [submitted, setSubmitted] = useState(false);
+
+const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    
-    if (!title.trim()) return;
-    
     const newDecision = {
       id: Date.now(),
       title,
       date: new Date().toISOString(),
-      pros: pros.filter(p => p.trim()),
-      cons: cons.filter(c => c.trim()),
+      pros: pros.filter(p => p.trim()), 
+      cons: cons.filter(c => c.trim()), 
       isThinking,
       isDecided: false,
     };
-    
     onSave(newDecision);
     resetForm();
   };
@@ -32,11 +30,11 @@ const DecisionForm = ({ onSave }) => {
     setPros(['']);
     setCons(['']);
     setIsThinking(true);
-    setSubmitted(false);
   };
 
-  const addProField = () => setPros([...pros, '']);
-  const addConField = () => setCons([...cons, '']);
+  const addProField = () => {
+    setPros([...pros, '']);
+  };
 
   const removeProField = (index) => {
     if (pros.length > 1) {
@@ -46,18 +44,22 @@ const DecisionForm = ({ onSave }) => {
     }
   };
 
+  const handleProChange = (index, value) => {
+    const newPros = [...pros];
+    newPros[index] = value;
+    setPros(newPros);
+  };
+
+  const addConField = () => {
+    setCons([...cons, '']);
+  };
+
   const removeConField = (index) => {
     if (cons.length > 1) {
       const newCons = [...cons];
       newCons.splice(index, 1);
       setCons(newCons);
     }
-  };
-
-  const handleProChange = (index, value) => {
-    const newPros = [...pros];
-    newPros[index] = value;
-    setPros(newPros);
   };
 
   const handleConChange = (index, value) => {
@@ -73,7 +75,7 @@ const DecisionForm = ({ onSave }) => {
         <h2 className="decision-form-title">New Decision</h2>
         
         <form onSubmit={handleSubmit} className="form-space row g-3">
-          {/* Title Field - Full width on mobile, half on medium+ */}
+          
           <div className="col-12 col-md-6">
             <label htmlFor="title" className="form-label">
               Decision Title*
@@ -87,11 +89,11 @@ const DecisionForm = ({ onSave }) => {
               required
             />
             {submitted && !title.trim() && (
-            <p className="error-message">Title is required</p>
-          )}
+              <div className="error-message">Title is required</div>
+            )}
           </div>
 
-          {/* Pros Section - Full width */}
+          
           <div className="col-12">
             <div className="d-flex justify-content-between align-items-center mb-2">
               <label className="form-label">
@@ -132,7 +134,7 @@ const DecisionForm = ({ onSave }) => {
             </div>
           </div>
 
-          {/* Cons Section - Full width */}
+        
           <div className="col-12">
             <div className="d-flex justify-content-between align-items-center mb-2">
               <label className="form-label">
@@ -173,7 +175,7 @@ const DecisionForm = ({ onSave }) => {
             </div>
           </div>
 
-          {/* Thinking Toggle - Full width */}
+          
           <div className="col-12">
             <div className="checkbox-group">
               <input
@@ -189,11 +191,11 @@ const DecisionForm = ({ onSave }) => {
             </div>
           </div>
 
-          {/* Submit Button - Full width */}
+        
           <div className="col-12">
             <button
               type="submit"
-              className="form-button w-100"
+              className="form-button"
             >
               Save Decision
             </button>
